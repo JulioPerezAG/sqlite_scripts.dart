@@ -1,0 +1,15 @@
+targets:
+  $default:
+    builders:
+      sqlite_scripts_annotation|sqlite_scripts_generator:
+        enabled: true
+
+builders:
+  sqlite_scripts_generator:
+    target: ":sqlite_scripts_generator"
+    import: "package:sqlite_scripts_generator/builder.dart"
+    builder_factories: ["sqliteScripts"]
+    build_extensions: {".dart": ["sqlite.g.part"]}
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
