@@ -12,8 +12,9 @@ dependencies:
   source_gen: ^1.2.6
   sqlite_scripts_annotation: ^1.0.0
 
+dev_dependencies:
+  build_runner: ^2.3.2
+
 dependency_overrides:
   sqlite_scripts_annotation:
     path: ../sqlite_scripts_annotation
-dev_dependencies:
-  build_runner: ^2.3.2
